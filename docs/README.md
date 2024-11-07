@@ -38,18 +38,17 @@ Urban agriculture is gaining traction as a sustainable approach to address food 
 
 ## Technology Stack
 
-- **Machine Learning**: TensorFlow, Google Colab, TensorFlow Lite
-- **Cloud Computing**: Google Cloud Platform, Firebase, Cloud Run, Cloud SQL, Node.js
-- **Mobile Development**: Android Studio, Kotlin, Jetpack, Room, Retrofit
+- **Machine Learning**: TensorFlow, Google Colab, TensorFlow Lite, PyCharm, Matplotlib, Scikit-learn, Keras, NumPy, Pandas, Flask
+- **Cloud Computing**: Google Cloud Platform, Firebase, Cloud Run, Cloud SQL, Compute Engine (VM Instance), Cloud Storage, Node.js, API Endpoint, VS Code, Postman
+- **Mobile Development**: Android Studio, Kotlin, Jetpack, Room, Retrofit, Figma, Glide
 - **Version Control**: GitHub (collaboration and version control)
 
 ## Repository Structure
 
 ```plaintext
 ├── README.md                   # Project overview and setup instructions
-├── backend/                    # Backend and cloud infrastructure code
-├── mobile_app/                 # Android app code
-├── ml_model/                   # Machine learning model code and datasets
+├── cloud_computing/            # Backend and cloud infrastructure code
+├── mobile_development/         # Android app code
+├── machine_learning/           # Machine learning model code and datasets
 ├── docs/                       # Documentation for setup, API, etc.
-└── tests/                      # Code tests for API and model validation
 
