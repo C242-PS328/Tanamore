@@ -65,5 +65,3 @@ Urban agriculture is gaining traction as a sustainable approach to address food 
 ├── mobile_development/         # Android app code
 ├── machine_learning/           # Machine learning model code and datasets
 └── docs/                       # Documentation for setup, API, etc.
-
-
