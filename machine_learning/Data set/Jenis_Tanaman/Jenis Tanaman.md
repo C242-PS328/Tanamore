@@ -9,7 +9,17 @@ This document provides an overview of the source dataset used for the Tanamore p
 
 ## Dataset Format
 - *Images:* .jpg, .png
-- *Labels:* The plant species include Snake plant, Ponytail Palm Polka Dot plant, Monstera Deliciosa, Elephant Ear,Dumb Cane, Dracaena, Chinese evergreen, Birds Nest Fern, Areca Palm, and Aloe Vera  .
+- *Labels:* The plant species include
+- Snake plant,
+- Ponytail Palm Polka Dot plant,
+- Monstera Deliciosa,
+- Elephant Ear,
+- Dumb Cane,
+- Dracaena,
+- Chinese evergreen,
+- Birds Nest Fern,
+- Areca Palm, and
+- Aloe Vera  .
 
 ## License
 - *Type:* Open Source
