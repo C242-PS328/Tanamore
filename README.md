@@ -12,11 +12,16 @@ Urban agriculture is gaining traction as a sustainable approach to address food 
 
 ## Key Features
 
+1. **Plant Disease Detection** - Identifies plant diseases via photo upload, providing insights into the plant’s health.
+2. **Treatment Recommendation** - Provides tailored advice based on plant type and disease, including watering, nutrient, and light needs.
+
+## Side Features
+
 1. **User Registration** - Allows users to create an account, enabling personalized recommendations.
-2. **Plant Disease Detection** - Identifies plant diseases via photo upload, providing insights into the plant’s health.
-3. **Treatment Recommendation** - Provides tailored advice based on plant type and disease, including watering, nutrient, and light needs.
-4. **Plant Watering Reminder** - Sends notifications to remind users when to water their plants, ensuring timely care.
-5. **Encyclopedia of Plants and Diseases** - A comprehensive guide containing descriptions, habitats, common diseases, and preventive measures.
+2. **Plant Detection** - Identify plants through photo analysis.
+3. **Plant Encyclopedia** - A comprehensive guide containing descriptions, habitats, common diseases, and preventive measures.
+4. **Plant Watering & Harvest Reminder** - Sends notifications to remind users when to water their plants and when to harvest them, ensuring timely care.
+5. **KebunKu** - Personal garden tracker to monitor and manage user’s own plants.
 
 ## Project Goals
 
