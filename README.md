@@ -1,72 +1,51 @@
-# Tanamore 🌱
+# Tanamore Machine Learning Repository
 
-**Capstone Project for Urban Gardening Support Application**
+This repository contains datasets, models, and scripts used for plant disease and plant type classification using machine learning techniques. The project uses image datasets for training and evaluating models.
 
-## Project Overview
+---
 
-Tanamore is a mobile application designed to assist urban gardeners, especially beginners, in managing and maintaining plant health. This application leverages machine learning to provide plant disease detection and personalized care recommendations, enabling users to overcome common challenges in gardening and increase their confidence in plant care.
+## Table of Contents
+1. [Datasets](#datasets)
+2. [Model 1: Plant Disease Classification](#model-1-plant-disease-classification)
+3. [Model 2: Plant Type Classification](#model-2-plant-type-classification)
 
-## Background
+---
 
-Urban agriculture is gaining traction as a sustainable approach to address food security and enhance green spaces in cities. Many new urban gardeners face difficulties in plant care, including identifying plant diseases and determining appropriate treatment routines. Tanamore aims to support these gardeners by providing tools to help them recognize and treat plant diseases while receiving care tips for maintaining plant health.
+## Datasets
 
-## Key Features
+The following datasets are available for training and testing the models:
 
-1. **Plant Disease Detection** - Identifies plant diseases via photo upload, providing insights into the plant’s health.
-2. **Treatment Recommendation** - Provides tailored advice based on plant type and disease, including watering, nutrient, and light needs.
+1. **[Plant Disease Images Dataset](https://github.com/Tanamore/machine_learning/tree/b0280b9a11cbf2319fee7f9313514dd916a12f9a/machine_learning/Dataset%20Machine%20Learning/Dataset%20Gambar%20Penyakit%20Tanaman)**  
+   Contains images of plants with various diseases for classification and diagnosis.
 
-## Side Features
+2. **[Plant Type Images Dataset](https://github.com/Tanamore/machine_learning/tree/b0280b9a11cbf2319fee7f9313514dd916a12f9a/machine_learning/Dataset%20Machine%20Learning/Dataset%20Gambar%20Jenis%20Tanaman)**  
+   Contains images of different plant types for classification purposes.
 
-1. **User Registration** - Allows users to create an account, enabling personalized recommendations.
-2. **Plant Detection** - Identify plants through photo analysis.
-3. **Plant Encyclopedia** - A comprehensive guide containing descriptions, habitats, common diseases, and preventive measures.
-4. **Plant Watering & Harvest Reminder** - Sends notifications to remind users when to water their plants and when to harvest them, ensuring timely care.
-5. **KebunKu** - Personal garden tracker to monitor and manage user’s own plants.
+Detailed descriptions of the datasets are available in the respective files:
+- [Plant Type Dataset Description](https://github.com/Tanamore/machine_learning/blob/b0280b9a11cbf2319fee7f9313514dd916a12f9a/machine_learning/Dataset%20Machine%20Learning/Jenis%20Tanaman.md)
+- [Plant Disease Dataset Description](https://github.com/Tanamore/machine_learning/blob/b0280b9a11cbf2319fee7f9313514dd916a12f9a/machine_learning/Dataset%20Machine%20Learning/dataset_penyakit_tanaman.md)
 
-## Project Goals
+---
 
-- Simplify plant identification and care for urban gardeners.
-- Foster interest in sustainable gardening practices.
-- Encourage the gardening hobby by making plant care more accessible.
+## Model 1: Plant Disease Classification
 
-## Team Members and Roles
+This model is trained to classify images of plants based on the diseases they have. It uses convolutional neural networks (CNN) for image classification.
 
-| Role               | Name                          | University                                           |
-|--------------------|-------------------------------|------------------------------------------------------|
-| **Machine Learning (ML)** | Yuliani Purwitasari | Universitas Pembangunan Nasional “Veteran” Jawa Timur |
-| **Machine Learning (ML)** | Navy Nurlyn Ajrina | Universitas Pembangunan Nasional “Veteran” Jawa Timur |
-| **Machine Learning (ML)** | Putri Intan Octavia Br Sipayung | Universitas Pembangunan Nasional “Veteran” Jawa Timur |
-| **Cloud Computing (CC)**  | Fathimatus Zahrotun Nisa’ | Universitas Pembangunan Nasional “Veteran” Jawa Timur |
-| **Cloud Computing (CC)**  | Muhammad Farhan Hidayatullah | Universitas Pembangunan Nasional “Veteran” Jawa Timur |
-| **Mobile Development (MD)** | Azzahra Rahmadani | Universitas Pembangunan Nasional “Veteran” Jawa Timur |
-| **Mobile Development (MD)** | Aldhi Saputra | Universitas PGRI Ronggolawe |
+- **[Model Notebook: Plant Disease Classification](https://github.com/Tanamore/machine_learning/blob/b0280b9a11cbf2319fee7f9313514dd916a12f9a/machine_learning/Model%201_Klasifikasi%20Penyakit%20Tanaman/Model_1_Klasifikasi_Penyakit_Tanaman.ipynb)**: The notebook for training and evaluating the disease classification model.
+- **[Revised Model Notebook](./Model%201_Klasifikasi%20Penyakit%20Tanaman/Model1_Revisi_Fix.ipynb)**: A fixed version of the original model.
+- **[Best Model](./Model%201_Klasifikasi%20Penyakit%20Tanaman/best_model.h5)**: The best-performing model saved in H5 format.
+- **[Fixed Model](./Model%201_Klasifikasi%20Penyakit%20Tanaman/model1_fix.h5)**: A revised version of the model.
+- **[TensorFlow.js Model](./Model%201_Klasifikasi%20Penyakit%20Tanaman/tfjs_model1_fix.zip)**: The model converted for use with TensorFlow.js.
 
-## Technology Stack
+---
 
-- **Machine Learning**: 
-  - **Frameworks**: TensorFlow, Keras
-  - **IDE**: Google Colab, PyCharm
-  - **Libraries**: TensorFlow Lite, Matplotlib, Scikit-learn, NumPy, Pandas
-  - **Backend Framework**: Flask
+## Model 2: Plant Type Classification
 
-- **Cloud Computing**:
-  - **Platform**: Google Cloud Platform (GCP)
-  - **Services**: Firebase Authentication, Cloud Run, Cloud SQL, Compute Engine (VM Instances), Cloud Storage
-  - **Backend Tools**: Node.js, API Endpoint, VS Code, Postman
+This model is trained to classify plant images based on their species or type.
 
-- **Mobile Development**:
-  - **IDE**: Android Studio
-  - **Language**: Kotlin
-  - **Libraries and Tools**: Jetpack, Room (SQLite), Retrofit, Glide
-  - **UI/UX Design**: Figma
-  
-- **Version Control**: GitHub (collaboration and version control)
+- **[Model Notebook: Plant Type Classification](./model%202_klasifikasi%20jenis%20tanaman/Model_2_Klasifikasi_Jenis_Tanaman.ipynb)**: The notebook for training and evaluating the plant type classification model.
+- **[InceptionV3 Best Model](./model%202_klasifikasi%20jenis%20tanaman/inceptionv3_best_model.h5)**: The best-performing model using the InceptionV3 architecture.
+- **[My Model](./model%202_klasifikasi%20jenis%20tanaman/my_model2.h5)**: A custom-trained model for plant type classification.
 
-## Repository Structure
+---
 
-```plaintext
-├── README.md                   # Project overview and setup instructions
-├── cloud_computing/            # Backend and cloud infrastructure code
-├── mobile_development/         # Android app code
-├── machine_learning/           # Machine learning model code and datasets
-└── docs/                       # Documentation for setup, API, etc.
