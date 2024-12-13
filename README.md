@@ -50,9 +50,8 @@ This model identifies 22 plant species, including fruits, vegetables, and orname
 ---
 ## Datasets
 
-The following datasets are available for training and testing the models:
 ### Plant Disease Detection Dataset
-Contains images of plants with various diseases for classification and diagnosis.
+Contains images of plants with various diseases for classification and diagnosis for Model 1.
 - **Source**:
   - [Plant Village Dataset](https://www.kaggle.com/datasets/abdallahalidev/plantvillage-dataset?select=color)
   - [Cleaned Dataset](https://github.com/Tanamore/machine_learning/tree/b0280b9a11cbf2319fee7f9313514dd916a12f9a/machine_learning/Dataset%20Machine%20Learning/Dataset%20Gambar%20Penyakit%20Tanaman)
@@ -64,7 +63,7 @@ Contains images of plants with various diseases for classification and diagnosis
   - Healthy states for various plants
 
 ### Plant Species Identification Dataset
-Contains images of different plant types for classification purposes.
+Contains images of different plant types for classification purposes for Model 2.
 - **Sources**: 
   - [House Plant Species Dataset](https://www.kaggle.com/datasets/kacpergregorowicz/house-plant-species)
   - [Cleaned Dataset](https://github.com/Tanamore/machine_learning/tree/b0280b9a11cbf2319fee7f9313514dd916a12f9a/machine_learning/Dataset%20Machine%20Learning/Dataset%20Gambar%20Jenis%20Tanaman)
@@ -97,6 +96,56 @@ Detailed descriptions of the datasets are available in the respective files:
 
 ---
 
+## Model Architecture
+
+### Model 1: Plant Disease Detection
+This model is a custom-built Convolutional Neural Network (CNN) architecture designed to extract visual features from input images. The architecture details are as follows:
+
+1. **Input Layer**: Accepts input images of size (256x256x3).
+2. **Rescaling**: Normalizes pixel values to the range [0, 1].
+3. **Convolutional Layers**:
+   - **Layer 1**: 32 filters (3x3 kernel), ReLU activation, followed by MaxPooling (2x2).
+   - **Layer 2**: 64 filters (3x3 kernel), ReLU activation, followed by MaxPooling (2x2).
+   - **Layer 3**: 128 filters (3x3 kernel), ReLU activation, followed by MaxPooling (2x2).
+   - **Layer 4**: 256 filters (3x3 kernel), ReLU activation, followed by MaxPooling (2x2).
+4. **Global Average Pooling**: Reduces the feature dimensions into a single vector.
+5. **Fully Connected Layers**:
+   - Dense layer with 128 units, ReLU activation, and Dropout (0.2).
+   - Dense layer with 39 units (output classes), Softmax activation.
+
+**Total Parameters**: 426,343  
+**Trainable Parameters**: 426,343  
+**Non-trainable Parameters**: 0  
+
+- **[Model Notebook: Plant Disease Classification](https://github.com/Tanamore/machine_learning/blob/b0280b9a11cbf2319fee7f9313514dd916a12f9a/machine_learning/Model%201_Klasifikasi%20Penyakit%20Tanaman/Model_1_Klasifikasi_Penyakit_Tanaman.ipynb)**: The notebook for training and evaluating the disease classification model.
+- **[Revised Model Notebook](https://github.com/Tanamore/machine_learning/blob/580efbe33156bcd051a0652383bc675934081575/machine_learning/Model%201_Klasifikasi%20Penyakit%20Tanaman/Model1_Revisi_Fix.ipynb)**: A fixed version of the original model.
+  
+---
+
+### Model 2: Plant Species Identification
+This model uses transfer learning with **InceptionV3** as the backbone architecture. It leverages pre-trained features from the ImageNet dataset. The architecture details are as follows:
+
+1. **Base Model**: InceptionV3 without the top fully connected layers (`include_top=False`) and pre-trained weights from ImageNet.
+   - Extracted Layer: Output from `mixed7`.
+   - Base model is frozen (non-trainable).
+2. **Global Average Pooling**: Reduces the feature dimensions into a single vector.
+3. **Fully Connected Layers**:
+   - Dense layer with 128 units, ReLU activation, and Dropout (0.2).
+   - Dense layer with the number of units equal to the number of classes (`num_classes`), Softmax activation.
+
+**Total Parameters**: 9,076,534  
+**Trainable Parameters**: 101,270  
+**Non-trainable Parameters**: 8,975,264  
+
+- **[Model Notebook: Plant Type Classification](https://github.com/Tanamore/machine_learning/blob/580efbe33156bcd051a0652383bc675934081575/machine_learning/model%202_klasifikasi%20jenis%20tanaman/Model_2_Klasifikasi_Jenis_Tanaman.ipynb)**: The notebook for training and evaluating the plant type classification model.
+---
+
+**Notes**:  
+- **Model 1** is custom-built from scratch, focusing on detecting plant diseases from images.  
+- **Model 2** leverages transfer learning to identify plant species, utilizing the rich features learned by InceptionV3 on a large-scale dataset like ImageNet.  
+- The architectures cater to different use cases, balancing between customizability and leveraging pre-trained models for efficiency.
+
+---
 ## Model 1: Plant Disease Classification
 
 This model is trained to classify images of plants based on the diseases they have. It uses convolutional neural networks (CNN) for image classification.
