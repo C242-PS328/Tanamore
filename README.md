@@ -198,6 +198,20 @@ To provide further insight into the model’s performance, we evaluated it using
 The graphs below show how the model improved during training, as well as the comparison between training and validation accuracy and loss.
 ![Evaluation for Model 2](path_to_confusion_matrix_image_1.png)
 
+---
+
+## Export and Deployment
+
+Both **Model 1** (Plant Disease Detection) and **Model 2** (Plant Species Identification) follow the same export and deployment process:
+- **Model Formats**: Both models were saved in the following formats:
+  - **H5 Format**: The models were saved in `.h5` format, which is commonly used for Keras models for easy storage and loading.
+  - **SavedModel Format**: In addition to the H5 format, both models were also saved in TensorFlow's SavedModel format, ensuring compatibility with TensorFlow applications.
+
+- **Model Conversion**: After saving in H5 and SavedModel formats, both models were converted to **TensorFlow.js** format for deployment.
+- **Deployment**: Once converted to TensorFlow.js, both models were deployed on the cloud to enable real-time predictions via web and mobile applications.
+This deployment process allows both models to be accessed seamlessly across various platforms while maintaining optimal performance.
+
+---
 ## Model 1: Plant Disease Classification
 
 This model is trained to classify images of plants based on the diseases they have. It uses convolutional neural networks (CNN) for image classification.
