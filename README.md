@@ -122,8 +122,7 @@ This model is a custom-built Convolutional Neural Network (CNN) architecture des
 **Trainable Parameters**: 426,343  
 **Non-trainable Parameters**: 0  
 
-- **[Model Notebook: Plant Disease Classification](https://github.com/Tanamore/machine_learning/blob/b0280b9a11cbf2319fee7f9313514dd916a12f9a/machine_learning/Model%201_Klasifikasi%20Penyakit%20Tanaman/Model_1_Klasifikasi_Penyakit_Tanaman.ipynb)**: The notebook for training and evaluating the disease classification model.
-- **[Revised Model Notebook](https://github.com/Tanamore/machine_learning/blob/580efbe33156bcd051a0652383bc675934081575/machine_learning/Model%201_Klasifikasi%20Penyakit%20Tanaman/Model1_Revisi_Fix.ipynb)**: A fixed version of the original model.
+- **[Model Notebook: Plant Disease Classification](https://github.com/Tanamore/machine_learning/blob/580efbe33156bcd051a0652383bc675934081575/machine_learning/Model%201_Klasifikasi%20Penyakit%20Tanaman/Model1_Revisi_Fix.ipynb)**: A fixed version of the original model.
   
 ---
 
@@ -185,10 +184,10 @@ After training, Model 1 was evaluated using the following metrics:
 - **F1-Score**: The F1-Score, which is the harmonic mean of precision and recall, further confirmed the model's balanced performance.
   
 Additionally, we visualized the training and validation performance over epochs. The graphs below show how the model improved during training, as well as the comparison between training and validation accuracy and loss.
-![Evaluation for Model 1](path_to_confusion_matrix_image_1.png)
+![Evaluation for Model 1](machine_learning/ML_Image/Hasil_Training_Model1.png)
 
 To provide further insight into the model’s performance, we evaluated it using a **confusion matrix**, which indicates how well the model performed across all disease classes.
-![Confusion Matrix for Model 1](path_to_confusion_matrix_image_1.png)
+![Confusion Matrix for Model 1](machine_learning/ML_Image/Confussion_Matrix_Model1.png)
 
 ### Model 2: Plant Species Identification
 
@@ -196,7 +195,7 @@ To provide further insight into the model’s performance, we evaluated it using
 - **Precision, Recall, F1-Score**: Strong performance overall.
 
 The graphs below show how the model improved during training, as well as the comparison between training and validation accuracy and loss.
-![Evaluation for Model 2](path_to_confusion_matrix_image_1.png)
+![Evaluation for Model 2](machine_learning/ML_Image/Hasil_Training_Model2.png)
 
 ---
 
@@ -211,14 +210,16 @@ Both **Model 1** (Plant Disease Detection) and **Model 2** (Plant Species Identi
 - **Deployment**: Once converted to TensorFlow.js, both models were deployed on the cloud to enable real-time predictions via mobile applications.
 
 - **Model 1**
-  - **[Fixed Model](https://github.com/Tanamore/machine_learning/blob/580efbe33156bcd051a0652383bc675934081575/machine_learning/Model%201_Klasifikasi%20Penyakit%20Tanaman/model1_fix.h5)**: The model 1 in H5 format.
-  - **[TensorFlow.js Model](https://github.com/Tanamore/machine_learning/blob/580efbe33156bcd051a0652383bc675934081575/machine_learning/Model%201_Klasifikasi%20Penyakit%20Tanaman/tfjs_model1_fix.zip)**: The model 1 converted for use with TensorFlow.js.
+  - **[model1_fix.h5](https://github.com/Tanamore/machine_learning/blob/580efbe33156bcd051a0652383bc675934081575/machine_learning/Model%201_Klasifikasi%20Penyakit%20Tanaman/model1_fix.h5)**: The model 1 in H5 format.
+  - **[TensorFlow.js Model1](https://github.com/Tanamore/machine_learning/blob/580efbe33156bcd051a0652383bc675934081575/machine_learning/Model%201_Klasifikasi%20Penyakit%20Tanaman/tfjs_model1_fix.zip)**: The model 1 converted for use with TensorFlow.js.
 - **Model 2**
-  - **[My Model](https://github.com/Tanamore/machine_learning/blob/580efbe33156bcd051a0652383bc675934081575/machine_learning/model%202_klasifikasi%20jenis%20tanaman/my_model2.h5)**: A custom-trained model for plant type classification.
+  - **[my_model2.h5](https://github.com/Tanamore/machine_learning/blob/580efbe33156bcd051a0652383bc675934081575/machine_learning/model%202_klasifikasi%20jenis%20tanaman/my_model2.h5)**: A custom-trained model for plant type classification.
+  - - **[TensorFlow.js Model2](https://github.com/Tanamore/machine_learning/blob/580efbe33156bcd051a0652383bc675934081575/machine_learning/Model%201_Klasifikasi%20Penyakit%20Tanaman/tfjs_model1_fix.zip)**: The model 1 converted for use with TensorFlow.js.
     
 This deployment process allows both models to be accessed seamlessly across various platforms while maintaining optimal performance.
 
 ---
+
 ## Model 1: Plant Disease Classification
 
 This model is trained to classify images of plants based on the diseases they have. It uses convolutional neural networks (CNN) for image classification.
