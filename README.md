@@ -8,25 +8,6 @@ These models aim to improve plant care and farming efficiency through advanced m
 
 ---
 
-## Table of Contents
-1. [Overview](#overview)
-2. [Tools and Frameworks](#tools-and-frameworks)
-3. [Dataset](#dataset)
-   - [Plant Disease Detection](#plant-disease-detection-dataset)
-   - [Plant Species Identification](#plant-species-identification-dataset)
-4. [Preprocessing Steps](#preprocessing-steps)
-5. [Model Architecture](#model-architecture)
-   - [Plant Disease Detection](#model-1-plant-disease-detection)
-   - [Plant Species Identification](#model-2-plant-species-identification)
-6. [Training Process](#training-process)
-7. [Evaluation and Results](#evaluation-and-results)
-8. [Export and Deployment](#export-and-deployment)
-9. [Limitations and Future Work](#limitations-and-future-work)
-10. [File Organization](#file-organization)
-11. [How to Use](#how-to-use)
-
----
-
 ## Overview
 
 ### Model 1: Plant Disease Detection
