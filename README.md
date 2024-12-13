@@ -9,21 +9,68 @@ These models aim to improve plant care and farming efficiency through advanced m
 ---
 
 ## Table of Contents
-1. [Datasets](#datasets)
-2. [Model 1: Plant Disease Classification](#model-1-plant-disease-classification)
-3. [Model 2: Plant Type Classification](#model-2-plant-type-classification)
+## Table of Contents
+1. [Overview](#overview)
+2. [Tools and Frameworks](#tools-and-frameworks)
+3. [Dataset](#dataset)
+   - [Plant Disease Detection](#plant-disease-detection-dataset)
+   - [Plant Species Identification](#plant-species-identification-dataset)
+4. [Preprocessing Steps](#preprocessing-steps)
+5. [Model Architecture](#model-architecture)
+   - [Plant Disease Detection](#model-1-plant-disease-detection)
+   - [Plant Species Identification](#model-2-plant-species-identification)
+6. [Training Process](#training-process)
+7. [Evaluation and Results](#evaluation-and-results)
+8. [Export and Deployment](#export-and-deployment)
+9. [Limitations and Future Work](#limitations-and-future-work)
+10. [File Organization](#file-organization)
+11. [How to Use](#how-to-use)
 
 ---
 
+## Overview
+
+### Model 1: Plant Disease Detection
+This model classifies 38 types of plant diseases using images of infected leaves. It was built using a custom Convolutional Neural Network (CNN) architecture and trained on the Plant Village dataset. The aim is to help farmers and gardeners identify plant diseases early and take preventive actions.
+
+### Model 2: Plant Species Identification
+This model identifies 22 plant species, including fruits, vegetables, and ornamental plants, based on user-uploaded images. Developed using Transfer Learning with the **InceptionV3** pre-trained model, it simplifies plant identification for both professionals and hobbyists.
+
+---
+
+## Tools and Frameworks
+- **Programming Language**: Python
+- **Deep Learning Frameworks**: TensorFlow & Keras
+- **Pre-trained Model**: InceptionV3 for Model 2
+- **Libraries**: NumPy, Matplotlib, OpenCV, scikit-learn
+- **Data Augmentation**: ImageDataGenerator
+- **Development Platforms**: Google Colab, Google Drive
+- **Deployment Tools**: TensorFlow.js for web and mobile compatibility
+- **Model Optimization**: Keras Callbacks (ModelCheckpoint, EarlyStopping)
+
+---
 ## Datasets
 
 The following datasets are available for training and testing the models:
+### Plant Disease Detection Dataset
+Contains images of plants with various diseases for classification and diagnosis.
+- **Source**:
+  - [Plant Village Dataset](https://www.kaggle.com/datasets/abdallahalidev/plantvillage-dataset?select=color)
+  - [Cleaned Dataset](https://github.com/Tanamore/machine_learning/tree/b0280b9a11cbf2319fee7f9313514dd916a12f9a/machine_learning/Dataset%20Machine%20Learning/Dataset%20Gambar%20Penyakit%20Tanaman)
+- **Total Images**: 51,832
+- **Classes**: 38 (diseases and healthy plant states)
+- Example diseases:
+  - Apple Scab, Black Rot, Cedar Apple Rust
+  - Tomato Bacterial Spot, Septoria Leaf Spot, Late Blight
+  - Healthy states for various plants
 
-1. **[Plant Disease Images Dataset](https://github.com/Tanamore/machine_learning/tree/b0280b9a11cbf2319fee7f9313514dd916a12f9a/machine_learning/Dataset%20Machine%20Learning/Dataset%20Gambar%20Penyakit%20Tanaman)**  
-   Contains images of plants with various diseases for classification and diagnosis.
-
-2. **[Plant Type Images Dataset](https://github.com/Tanamore/machine_learning/tree/b0280b9a11cbf2319fee7f9313514dd916a12f9a/machine_learning/Dataset%20Machine%20Learning/Dataset%20Gambar%20Jenis%20Tanaman)**  
-   Contains images of different plant types for classification purposes.
+### Plant Species Identification Dataset
+Contains images of different plant types for classification purposes.
+- **Sources**: 
+  - [House Plant Species Dataset](https://www.kaggle.com/datasets/kacpergregorowicz/house-plant-species)
+  - [Cleaned Dataset](https://github.com/Tanamore/machine_learning/tree/b0280b9a11cbf2319fee7f9313514dd916a12f9a/machine_learning/Dataset%20Machine%20Learning/Dataset%20Gambar%20Jenis%20Tanaman)
+- **Total Images**: 17,238
+- **Classes**: 22 species (e.g., Aloe Vera, Grape, Tomato, Monstera Deliciosa, Snake Plant)
 
 Detailed descriptions of the datasets are available in the respective files:
 - [Plant Type Dataset Description](https://github.com/Tanamore/machine_learning/blob/b0280b9a11cbf2319fee7f9313514dd916a12f9a/machine_learning/Dataset%20Machine%20Learning/Jenis%20Tanaman.md)
