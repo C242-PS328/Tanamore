@@ -98,6 +98,11 @@ Detailed descriptions of the datasets are available in the respective files:
 
 ## Model Architecture
 
+**Notes**:  
+- **Model 1** is custom-built from scratch, focusing on detecting plant diseases from images.  
+- **Model 2** leverages transfer learning to identify plant species, utilizing the rich features learned by InceptionV3 on a large-scale dataset like ImageNet.  
+- The architectures cater to different use cases, balancing between customizability and leveraging pre-trained models for efficiency.
+
 ### Model 1: Plant Disease Detection
 This model is a custom-built Convolutional Neural Network (CNN) architecture designed to extract visual features from input images. The architecture details are as follows:
 
@@ -138,14 +143,61 @@ This model uses transfer learning with **InceptionV3** as the backbone architect
 **Non-trainable Parameters**: 8,975,264  
 
 - **[Model Notebook: Plant Type Classification](https://github.com/Tanamore/machine_learning/blob/580efbe33156bcd051a0652383bc675934081575/machine_learning/model%202_klasifikasi%20jenis%20tanaman/Model_2_Klasifikasi_Jenis_Tanaman.ipynb)**: The notebook for training and evaluating the plant type classification model.
+  
 ---
 
-**Notes**:  
-- **Model 1** is custom-built from scratch, focusing on detecting plant diseases from images.  
-- **Model 2** leverages transfer learning to identify plant species, utilizing the rich features learned by InceptionV3 on a large-scale dataset like ImageNet.  
-- The architectures cater to different use cases, balancing between customizability and leveraging pre-trained models for efficiency.
+## Training Process
+
+### Model 1: Plant Disease Detection
+
+For Model 1, the training process involves the following configuration:
+
+- **Optimizer**: The Adam optimizer with a learning rate of 0.001 was used for efficient training.
+- **Loss Function**: The sparse categorical crossentropy loss function was used, suitable for multi-class classification tasks.
+- **Metrics**: Accuracy was the primary evaluation metric during training.
+- **Callbacks**:
+  - **EarlyStopping**: This callback stops training early if the validation loss does not improve after 5 epochs to avoid overfitting.
+  - **ModelCheckpoint**: The best model, based on the validation loss, is saved to prevent the model from training too long.
+The model was trained for 30 epochs with a validation dataset and was continuously evaluated to track its progress.
+
+### Model 2: Plant Species Identification
+
+For Model 2, the training configuration is similar to Model 1 but tailored for plant species classification:
+
+- **Optimizer**: Adam optimizer was used with a learning rate of 0.001.
+- **Loss Function**: Sparse categorical crossentropy, as Model 2 is a multi-class classification task.
+- **Metrics**: The accuracy metric was used to evaluate the performance during training.
+- **Callbacks**:
+  - **ModelCheckpoint**: This callback saves the best model based on validation accuracy.
+Model 2 was trained for 20 epochs with the validation data, ensuring the best performing model was retained.
 
 ---
+
+## Evaluation and Results
+
+### Model 1: Plant Disease Detection
+
+After training, Model 1 was evaluated using the following metrics:
+
+- **Accuracy**: The model achieved 97.66% accuracy on the validation set and 97.65% on the test set, demonstrating that the model consistently performed well across different datasets.
+- **Precision**: The model showed high precision, indicating that it correctly identified plant diseases while minimizing false positives.
+- **Recall**: A strong recall score indicates that the model was able to correctly identify a high percentage of true positives (plants with diseases).
+- **F1-Score**: The F1-Score, which is the harmonic mean of precision and recall, further confirmed the model's balanced performance.
+  
+Additionally, we visualized the training and validation performance over epochs. The graphs below show how the model improved during training, as well as the comparison between training and validation accuracy and loss.
+![Evaluation for Model 1](path_to_confusion_matrix_image_1.png)
+
+To provide further insight into the model’s performance, we evaluated it using a **confusion matrix**, which indicates how well the model performed across all disease classes.
+![Confusion Matrix for Model 1](path_to_confusion_matrix_image_1.png)
+
+### Model 2: Plant Species Identification
+
+- **Accuracy**: 97% on both the validation and test sets.
+- **Precision, Recall, F1-Score**: Strong performance overall.
+
+The graphs below show how the model improved during training, as well as the comparison between training and validation accuracy and loss.
+![Evaluation for Model 2](path_to_confusion_matrix_image_1.png)
+
 ## Model 1: Plant Disease Classification
 
 This model is trained to classify images of plants based on the diseases they have. It uses convolutional neural networks (CNN) for image classification.
