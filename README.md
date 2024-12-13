@@ -3,6 +3,7 @@
 This repository contains datasets, models, and scripts used for plant disease and plant type classification using machine learning techniques. The project uses image datasets for training and evaluating models. This repository contains machine learning models developed for the Tanamore application. These models are designed to:
 - **Plant Disease Detection**: Identifies plant diseases based on images of leaves.
 - **Plant Species Identification**: Recognizes plant species based on user-uploaded images.
+
 These models aim to improve plant care and farming efficiency through advanced machine learning techniques.
 
 ---
