@@ -208,7 +208,14 @@ Both **Model 1** (Plant Disease Detection) and **Model 2** (Plant Species Identi
   - **SavedModel Format**: In addition to the H5 format, both models were also saved in TensorFlow's SavedModel format, ensuring compatibility with TensorFlow applications.
 
 - **Model Conversion**: After saving in H5 and SavedModel formats, both models were converted to **TensorFlow.js** format for deployment.
-- **Deployment**: Once converted to TensorFlow.js, both models were deployed on the cloud to enable real-time predictions via web and mobile applications.
+- **Deployment**: Once converted to TensorFlow.js, both models were deployed on the cloud to enable real-time predictions via mobile applications.
+
+- **Model 1**
+  - **[Fixed Model](https://github.com/Tanamore/machine_learning/blob/580efbe33156bcd051a0652383bc675934081575/machine_learning/Model%201_Klasifikasi%20Penyakit%20Tanaman/model1_fix.h5)**: The model 1 in H5 format.
+  - **[TensorFlow.js Model](https://github.com/Tanamore/machine_learning/blob/580efbe33156bcd051a0652383bc675934081575/machine_learning/Model%201_Klasifikasi%20Penyakit%20Tanaman/tfjs_model1_fix.zip)**: The model 1 converted for use with TensorFlow.js.
+- **Model 2**
+  - **[My Model](https://github.com/Tanamore/machine_learning/blob/580efbe33156bcd051a0652383bc675934081575/machine_learning/model%202_klasifikasi%20jenis%20tanaman/my_model2.h5)**: A custom-trained model for plant type classification.
+    
 This deployment process allows both models to be accessed seamlessly across various platforms while maintaining optimal performance.
 
 ---
