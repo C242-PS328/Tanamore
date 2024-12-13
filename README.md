@@ -9,7 +9,6 @@ These models aim to improve plant care and farming efficiency through advanced m
 ---
 
 ## Table of Contents
-## Table of Contents
 1. [Overview](#overview)
 2. [Tools and Frameworks](#tools-and-frameworks)
 3. [Dataset](#dataset)
@@ -75,6 +74,26 @@ Contains images of different plant types for classification purposes.
 Detailed descriptions of the datasets are available in the respective files:
 - [Plant Type Dataset Description](https://github.com/Tanamore/machine_learning/blob/b0280b9a11cbf2319fee7f9313514dd916a12f9a/machine_learning/Dataset%20Machine%20Learning/Jenis%20Tanaman.md)
 - [Plant Disease Dataset Description](https://github.com/Tanamore/machine_learning/blob/b0280b9a11cbf2319fee7f9313514dd916a12f9a/machine_learning/Dataset%20Machine%20Learning/dataset_penyakit_tanaman.md)
+
+---
+
+## Preprocessing Steps
+
+### Model 1: Plant Disease Detection
+1. **Image Resizing**: All images resized to **256x256** pixels.
+2. **Data Augmentation**: Augmentation is already applied in the dataset.
+3. **Data Splitting**:
+   - **80%** Training
+   - **20%** Validation
+   - **20%** Testing
+
+### Model 2: Plant Species Identification
+1. **Image Resizing**: All images resized to **224x224** pixels.
+2. **Data Augmentation**: Random rotations, flips, and zooms applied to enhance model robustness.
+3. **Data Splitting**:
+   - **80%** Training
+   - **20%** Validation
+   - **20%** Testing
 
 ---
 
